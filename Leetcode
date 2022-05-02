@@ -1,0 +1,22 @@
+class Solution {
+    public int[] sortArrayByParity(int[] nums) {
+        int[] out = new int[nums.length];
+        int j=0;
+        int k=1;
+        if(nums.length == 1){
+           return nums;
+        }
+        else{
+            for(int i =0;i<nums.length;++i){
+                if(nums[i]%2==0){
+                    out[j]=nums[i];
+                    ++j;
+                }
+                else{
+                out[nums.length-k]=nums[i];
+                ++k;
+                }
+            }
+        }return out;
+    }
+}
